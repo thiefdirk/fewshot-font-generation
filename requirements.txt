@@ -8,3 +8,5 @@ fonttools
 adamp
 lpips
 tensorboardX
+
+python C:/fewshot-font-generation/train_LF.py C:/fewshot-font-generation/cfgs/LF/p1/train.yaml C:/fewshot-font-generation/cfgs/data/train/custom.yaml --phase 1 --work_dir C:/fewshot-font-generation/outputs/

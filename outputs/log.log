@@ -1,0 +1,462 @@
+[37m[36mINFO[0m[0m::09/23 17:11:31 | Run Argv:
+> C:/fewshot-font-generation/train_LF.py C:/fewshot-font-generation/cfgs/LF/p1/train.yaml C:/fewshot-font-generation/cfgs/data/train/custom.yaml --phase 1 --work_dir C:/fewshot-font-generation/outputs/
+[37m[36mINFO[0m[0m::09/23 17:11:31 | Args:
+config_paths  = ['C:/fewshot-font-generation/cfgs/LF/p1/train.yaml', 'C:/fewshot-font-generation/cfgs/data/train/custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::09/23 17:11:31 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/chn/decomposition.json
+primals: data/chn/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: C:\fewshot-font-generation\outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/chn/source.ttf
+    source_ext: ttf
+    data_dir: data_example/chn/ttf
+    chars: data/chn/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/chn/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/chn/val_unseen_chars.json
+      source_path: data/chn/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/chn/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/chn/val_seen_chars.json
+      source_path: data/chn/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::09/23 17:11:32 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::09/23 17:11:32 | [0] Build model ...
+[37m[36mINFO[0m[0m::09/23 17:11:33 | Start training ...
+[37m[36mINFO[0m[0m::09/23 17:12:58 | Run Argv:
+> C:/fewshot-font-generation/train_LF.py C:/fewshot-font-generation/cfgs/LF/p1/train.yaml C:/fewshot-font-generation/cfgs/data/train/custom.yaml --phase 1 --work_dir C:/fewshot-font-generation/outputs/
+[37m[36mINFO[0m[0m::09/23 17:12:58 | Args:
+config_paths  = ['C:/fewshot-font-generation/cfgs/LF/p1/train.yaml', 'C:/fewshot-font-generation/cfgs/data/train/custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::09/23 17:12:58 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: C:\fewshot-font-generation\outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::09/23 17:12:58 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::09/23 17:13:00 | [0] Build model ...
+[37m[36mINFO[0m[0m::09/23 17:13:01 | Start training ...
+[37m[36mINFO[0m[0m::09/23 17:13:57 | Run Argv:
+> C:/fewshot-font-generation/train_LF.py C:/fewshot-font-generation/cfgs/LF/p1/train.yaml C:/fewshot-font-generation/cfgs/data/train/custom.yaml --phase 1 --work_dir C:/fewshot-font-generation/outputs/ --gpu 0
+[37m[36mINFO[0m[0m::09/23 17:13:57 | Args:
+config_paths  = ['C:/fewshot-font-generation/cfgs/LF/p1/train.yaml', 'C:/fewshot-font-generation/cfgs/data/train/custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 0
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 0
+[37m[36mINFO[0m[0m::09/23 17:13:57 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: C:\fewshot-font-generation\outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::09/23 17:13:57 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::09/23 17:13:58 | [0] Build model ...
+[37m[36mINFO[0m[0m::09/23 17:13:59 | Start training ...
+[37m[36mINFO[0m[0m::09/23 17:15:05 | Run Argv:
+> C:/fewshot-font-generation/train_LF.py C:/fewshot-font-generation/cfgs/LF/p1/train.yaml C:/fewshot-font-generation/cfgs/data/train/custom.yaml --phase 1 --work_dir C:/fewshot-font-generation/outputs/ --gpu 1
+[37m[36mINFO[0m[0m::09/23 17:15:05 | Args:
+config_paths  = ['C:/fewshot-font-generation/cfgs/LF/p1/train.yaml', 'C:/fewshot-font-generation/cfgs/data/train/custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::09/23 17:15:05 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: C:\fewshot-font-generation\outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::09/23 17:15:05 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::09/23 17:15:06 | [0] Build model ...
+[37m[36mINFO[0m[0m::09/23 17:15:07 | Start training ...
+[37m[36mINFO[0m[0m::09/23 17:31:00 | Run Argv:
+> C:/fewshot-font-generation/train_LF.py C:/fewshot-font-generation/cfgs/LF/p1/train.yaml C:/fewshot-font-generation/cfgs/data/train/custom.yaml --phase 1 --work_dir C:/fewshot-font-generation/outputs/ -g 1
+[37m[36mINFO[0m[0m::09/23 17:31:00 | Args:
+config_paths  = ['C:/fewshot-font-generation/cfgs/LF/p1/train.yaml', 'C:/fewshot-font-generation/cfgs/data/train/custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::09/23 17:31:00 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: C:\fewshot-font-generation\outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::09/23 17:31:00 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::09/23 17:31:01 | [0] Build model ...
+[37m[36mINFO[0m[0m::09/23 17:31:03 | Start training ...
+[37m[36mINFO[0m[0m::09/23 17:33:00 | Run Argv:
+> C:/fewshot-font-generation/train_LF.py C:/fewshot-font-generation/cfgs/LF/p1/train.yaml C:/fewshot-font-generation/cfgs/data/train/custom.yaml -g 1 --phase 1 --work_dir C:/fewshot-font-generation/outputs/
+[37m[36mINFO[0m[0m::09/23 17:33:00 | Args:
+config_paths  = ['C:/fewshot-font-generation/cfgs/LF/p1/train.yaml', 'C:/fewshot-font-generation/cfgs/data/train/custom.yaml']
+phase         = 1
+nodes         = 1
+gpus_per_node = 1
+nr            = 0
+port          = 13481
+verbose       = True
+world_size    = 1
+[37m[36mINFO[0m[0m::09/23 17:33:00 | Configs:
+seed: 2
+model: lf
+phase: comb
+decomposition: data/kor/decomposition.json
+primals: data/kor/primals.json
+max_iter: 800000
+g_lr: 0.0002
+d_lr: 0.0008
+ac_lr: 0.0002
+adam_betas: 
+  - 0.0
+  - 0.9
+trainer: 
+  resume: None
+  force_resume: False
+  [36mwork_dir: C:\fewshot-font-generation\outputs
+[0m  pixel_loss_type: l1
+  pixel_w: 0.1
+  gan_w: 1.0
+  fm_layers: all
+  fm_w: 1.0
+  ac_w: 0.1
+  ac_gen_w: 0.1
+  fact_const_w: 0.0
+  save: all-last
+  print_freq: 1000
+  val_freq: 10000
+  save_freq: 50000
+  tb_freq: 100
+gen: 
+  emb_dim: None
+dset: 
+  loader: 
+    batch_size: 8
+    num_workers: 16
+  train: 
+    n_in_s: 3
+    n_in_min: 3
+    n_in_max: 5
+    source_path: data/kor/source.ttf
+    source_ext: ttf
+    data_dir: data_example/kor/ttf
+    chars: data/kor/train_chars.json
+    extension: ttf
+  val: 
+    unseen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_unseen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+    seen_chars: 
+      data_dir: data_example/kor/ttf
+      extension: ttf
+      n_gen: 20
+      n_font: 5
+      chars: data/kor/val_seen_chars.json
+      source_path: data/kor/source.ttf
+      source_ext: ttf
+use_ddp: False
+[37m[36mINFO[0m[0m::09/23 17:33:01 | [0] Get dataset ...
+[37m[36mINFO[0m[0m::09/23 17:33:02 | [0] Build model ...
+[37m[36mINFO[0m[0m::09/23 17:33:03 | Start training ...
